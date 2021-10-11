@@ -63,7 +63,7 @@ Django | 3.1.7 | 3.2.8 | 3.0 | 3.0.11 |
 REINTERPRETATION of the problem...Maybe I'm not supposed to build a web application. This is test and/or data driven development. 
 Build all functional and API tests first. Simply use SoapUI, ReadyAPI, and swagger?
 
-#### Test the API……how? See this: [Functional Tests in ReadyAPI](https://support.smartbear.com/readyapi/docs/functional/creating.html)
+#### Test the API……See this: [Functional Tests in ReadyAPI](https://support.smartbear.com/readyapi/docs/functional/creating.html)
 ---------------------------------------------------------------------------------------------------------------------------------------
 * First, I exported the swagger API definition. Filename: `api-docs.json`
 
@@ -80,7 +80,7 @@ Then, I imported into SoapUI. Soap currently only has RESTful. SoapUI produced 2
 
 #### Functional testing……
 ------------------------------------------------------------------------------------------------------------------------------------
-* **Testing Requiement 1: Create a new pet and add a picture to it**
+* **Testing Requirement 1: Create a new pet and add a picture to it**
 
 [Test case in SoapUI:](https://www.tutorialspoint.com/soapui/soapui_teststep.htm) "Test_Case_1_Create_pet_and_add_picture" 
 
@@ -90,14 +90,14 @@ Then, I imported into SoapUI. Soap currently only has RESTful. SoapUI produced 2
 I made a test suite and Exported results from running the test suite to file [TestSuiteLogExport_10_10_2021_545am.txt](https://github.com/heathermortensen/VP_Project/files/7318014/TestSuiteLogExport_10_10_2021_545am.txt). I was able to create a test case, add some assertions, and add a malfunctioning script (is this done in [Groovy?](https://www.tutorialspoint.com/groovy/groovy_variables.htm)). Some assertions are guaranteed to fail because they equal true if no input is provided.
 
 [Source on REST Testing](https://www.soapui.org/getting-started/rest-testing/)
-To Do: \
-[ ]   Make this test case better w/ better conditions: 1.) petId is unique in the system, otherwise error. Is the pedId the same in both steps? 2.) Is petId the only required parameter? If its not presnt - error. petId != 0 test. 3.) Test for each combination of null and not null optional parameters. How many combinations? Script some data for that. 4.) Same image is not present more than once in the array. Is this a static or dynamically sized array?  Max size is not exceeded and it cannot fill infinitley with pics.  \
+To Do:  \
+[ ]   Make this test case better w/ better conditions: 1.) petId is unique in the system, otherwise error. Is the petId the same in both steps? 2.) Is petId the only required parameter? If its not present - error. petId != 0 test. 3.) Test for each combination of null and not null optional parameters. How many combinations? Script some data for that. 4.) Same image is not present more than once in the array. Is this a static or dynamically sized array?  Max size is not exceeded and it cannot fill infinitely with pics.  \
 
-* **Testing Requiement 2: Search for new pet and similar pets**
+* **Testing Requirement 2: Search for new pet and similar pets**
 
 [Test case in SoapUI:](https://www.soapui.org/docs/functional-testing/properties/working-with-properties/) "Testing_Requirement_2_Search_for_new_pet_and_similar_pets" 
 
-I attempted to play with [data driven functional testing](https://www.soapui.org/docs/data-driven-tests/functional-tests/). However, I had no access to the Data Generator through soapUI's free trial version. I attempted to define Test Step Properties that would maintain a consistent petId parameter = 2 and status = avalible throughout both test steps. I thought properties ought to be defined at the highest level of the test tree to do that. That was not true. I need to look at properties in more depth. 
+I attempted to play with [data driven functional testing](https://www.soapui.org/docs/data-driven-tests/functional-tests/). However, I had no access to the Data Generator through soapUI's free trial version. I attempted to define Test Step Properties that would maintain a consistent petId parameter = 2 and status = available throughout both test steps. I thought properties ought to be defined at the highest level of the test tree to do that. That was not true. I need to look at properties in more depth. 
 
 TEST RESULTS
 - At the top level, property petId = 8 is defined and the test fails.
@@ -106,7 +106,7 @@ TEST RESULTS
 - At the first test step, my response is no longer displayed, but all assertions pass.
 - At the second test step "findPetStatus," the step returns all pets with status = avalible.  
 
-Properties set at the lowest level of the tree might take precedence over peroperties set at the highest levels of the testing tree.
+Properties set at the lowest level of the tree might take precedence over properties set at the highest levels of the testing tree.
 
 Next, See this video....https://www.soapui.org/learn/functional-testing/api-functional-testing-soapui-webinar/
 
@@ -118,7 +118,7 @@ Next, See this video....https://www.soapui.org/learn/functional-testing/api-func
 * User creds for logging into server are: tester abc123
 
 To Do: \
-[ ]   Upload to GitHub. Email Madelon & notify where repo is.  \
+[x]   Upload to GitHub. Email Madelon & notify where repo is.  \
 [ ]    API tests \
 [ ]    Functional tests  - [Functional Tests in ReadyAPI](https://support.smartbear.com/readyapi/docs/functional/creating.html) \
 [x]    [Data Driven Functional Testing video](https://www.soapui.org/docs/data-driven-tests/functional-tests/) \
@@ -131,7 +131,78 @@ Soap vs rest costs/benefits: Soap - exacting/ridgid. secure. code first. Lots of
 [ ]    Any valuable info in the windows that are open? \
 [x] Export WSDL file from ReadyAPI into SoapUI. Source: [Export to WSDL](https://support.smartbear.com/readyapi/docs/apis/export.html) \
 Filename: sample-service_1.wsdl  \
-    
+
+
+
+Windows open on my computer that might be needed later:
+
+[REST API Testing](https://www.soapui.org/docs/rest-testing/)
+
+[REST Functional Testing](https://www.soapui.org/docs/rest-testing/rest-functional-testing/)
+
+Similar video tutorial – 12 min: https://www.youtube.com/watch?v=9V2oqVzZuT4
+
+[Functional Tests - Using Scripts for Modularization]( https://www.soapui.org/docs/functional-testing/modularizing-your-tests/)
+
+**Authentication sources** 
+
+Authentication tests in video at min 30 of [video]( https://www.soapui.org/learn/functional-testing/api-functional-testing-soapui-webinar/). I think the specs said server had OAuth2, but I might have configured something with Basic somewhere while playing around. The server has username and password: tester abc123. Add that into the pet photo test case?
+
+[Authentication | API Testing With ReadyAPI]( https://www.youtube.com/watch?v=7baz0VLpkWA)
+
+[Basic authentication for REST requests](https://www.soapui.org/docs/oauth2/reference/basic/)
+
+[OAuth 2]( https://www.soapui.org/docs/oauth2/reference/add-authorization/)
+
+[OAuth 2 Basics](https://www.soapui.org/docs/oauth2/reference/basic/)
+
+[SoapUI 101: Beginner’s Guide to API Testing](https://www.soapui.org/soapui-101-beginners-guide-api-testing/) – search for ‘keys’
+
+ 
+
+Sources:
+
+[Django REST Framework Quickstart docs]( https://www.django-rest-framework.org/tutorial/quickstart/)
+
+[Django - A minimal example with Swagger UI]( https://www.django-rest-framework.org/topics/documenting-your-api/) – on documenting the API
+
+[Mock Operations & Responses]( https://www.soapui.org/docs/soap-mocking/mockoperations-and-responses/)
+
+[API Server and Base URL]( https://swagger.io/docs/specification/api-host-and-base-path/)
+
+[SoapUI – Test Step]( https://www.tutorialspoint.com/soapui/soapui_teststep.htm)
+
+[WADL Details in SoapUI](https://www.tutorialspoint.com/soapui/soapui_restful_wadl.htm)
+
+[Django REST FRAMEWORK - Tutorial 5: Relationships & Hyperlinked APIs]( https://www.django-rest-framework.org/tutorial/5-relationships-and-hyperlinked-apis/)
+
+[Creating a production ready API with Python and Django Rest Framework - part 1]( https://dev.to/andreagrandi/creating-a-production-ready-api-with-python-and-django-rest-framework---part-1-l34)
+
+[Export API to WSDL](https://support.smartbear.com/readyapi/docs/apis/export.html)
+
+[REST services]( https://www.soapui.org/docs/rest-testing/working-with-rest-services/)
+
+[github tutorial – adding soapui](https://www.youtube.com/watch?v=GFUikJWaMn0)
+
+ 
+
+Have a number of test cases for each scenario….Connect a data source.
+
+Test interactions with other protocols, like json and soap, not just rest.
+
+ 
+
+Testing different api communication types – synchronous and asynchronous (more real time data flow – servers can update a client anytime. Its not dependent of a request-response pair).
+
+ 
+
+What is meant by [WSDL?](https://support.smartbear.com/readyapi/docs/apis/export.html)
+
+WSDL, or Web Service Description Language, is an XML based definition language. It's used for describing the functionality of a SOAP based web service.
+
+
+
+​     
 
 
 
