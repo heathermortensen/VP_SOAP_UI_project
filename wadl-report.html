@@ -1,0 +1,1670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Swagger Petstore</title>
+<style type="text/css">
+                    body {
+                        font-family: sans-serif;
+                        font-size: 0.85em;
+                        margin: 2em 8em;
+                    }
+
+                    .methods {
+                        background-color: #ffffff;
+                        padding: 1em;
+                    }
+
+                    pre {
+                        border: dashed 1px;
+                        border-color: #999999;
+                        margin-left: 7px;
+                        padding: 0.5em;
+                        line-height: 150%;
+                        font-family: monospace;
+                        font-size: 12px;
+                        color: #000;
+                    }
+
+                    a:link {
+                        color: #333333;
+                        font-family: Verdana, Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    a:visited {
+                        color: #333333;
+                        color: #333333;
+                        font-family: Verdana, Arial, Helvetica, sans-serif;
+                    }
+
+                    h1 {
+                        margin: 0px 5px 5px;
+                        font: verdana, arial, helvetica;
+                        color: #00cc33;
+                        font-weight: normal;
+                        font-size: 18.0pt;
+                        font-weight: bold;
+                    }
+
+                    h2 {
+                        margin: 0px 0px 5px;
+                        font: verdana, arial, helvetica;
+                        color: #00cc33;
+                        font-weight: normal;
+                        font-size: 14.0pt;
+                        font-weight: bold;
+                    }
+
+                    h3 {
+                        margin: 10px 0px 5px;
+                        font-weight: bold;
+                        font-family: Verdana, Arial, Helvetica, sans-serif;
+                        font-size: 14px;
+                        color: #00cc33;
+                    }
+
+                    h4 {
+                        margin: 0em;
+                        padding: 0em;
+                    }
+
+                    h6 {
+                        font-size: 1.1em;
+                        color: #99a;
+                        margin: 0.5em 0em 0.25em 0em;
+                    }
+
+                    dd {
+                        margin-left: 1em;
+                    }
+
+                    tt {
+                        font-size: 1.2em;
+                    }
+
+                    table {
+                        margin-bottom: 0.5em;
+                    }
+
+                    th {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-align: left;
+                        padding: 5px;
+                        background: #00cc33;
+                        -moz-border-radius:;
+                        width = 150px;
+                    }
+
+                    td {
+                        padding: 3px 6px;
+                        font-weight: normal;
+                        vertical-align: top;
+                        background: #eeeeee;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    td p {
+                        margin: 0px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    ul {
+                        padding-left: 1.75em;
+                    }
+
+                    li {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    p + ul, p + ol, p + dl {
+                        margin-top: 0em;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 12px;
+                    }
+
+                    .optional {
+                        font-weight: normal;
+                        opacity: 0.75;
+                    }
+                </style>
+</head>
+<body>
+<h1>Swagger Petstore</h1>
+<p>This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.</p>
+<ul>
+<li>
+<a href="#resources">Resources</a>
+<ul>
+<li>
+<a href="#http://petstore.swagger.io/v2#/pet">http://petstore.swagger.io/v2/pet</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/pet/findByStatus">http://petstore.swagger.io/v2/pet/findByStatus</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/pet/findByTags">http://petstore.swagger.io/v2/pet/findByTags</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/pet/{petId}">http://petstore.swagger.io/v2/pet/{petId}</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/pet/{petId}/uploadImage">http://petstore.swagger.io/v2/pet/{petId}/uploadImage</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/store/inventory">http://petstore.swagger.io/v2/store/inventory</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/store/order">http://petstore.swagger.io/v2/store/order</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/store/order/{orderId}">http://petstore.swagger.io/v2/store/order/{orderId}</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/user">http://petstore.swagger.io/v2/user</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/user/createWithArray">http://petstore.swagger.io/v2/user/createWithArray</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/user/createWithList">http://petstore.swagger.io/v2/user/createWithList</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/user/login">http://petstore.swagger.io/v2/user/login</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/user/logout">http://petstore.swagger.io/v2/user/logout</a>
+</li>
+<li>
+<a href="#http://petstore.swagger.io/v2#/user/{username}">http://petstore.swagger.io/v2/user/{username}</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#representations">Representations</a>
+<ul>
+<li>
+<a href="#N2001B">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2001E">application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20025">Status Code405-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20028">Status Code405-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2002F">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20032">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20042">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20045">application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2004C">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2004F">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20056">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20059">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20060">Status Code405-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20063">Status Code405-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2006A">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2006D">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20098">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2009B">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200A2">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200A5">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200D0">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200D3">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200DA">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200DD">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20108">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2010B">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20112">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20115">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2011C">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2011F">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20159">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20160">Status Code405-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20163">Status Code405-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2016A">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20194">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20197">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2019E">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N201A1">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N201E4">multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N201EB">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N201F2">Status Code-multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2020E">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20227">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2022E">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20231">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20238">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2023B">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20242">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2026D">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20270">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20277">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2027A">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20281">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20284">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202A6">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202A9">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202B0">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202B3">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202CC">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202D3">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202D6">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202D9">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202F2">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202F9">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202FC">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202FF">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20318">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2031F">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20322">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20325">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2035E">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20361">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20368">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2036B">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20387">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2038A">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203B5">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203B8">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203BF">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203C2">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203C9">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203CC">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203EA">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203F1">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203F4">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203FB">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203FE">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20405">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20427">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2042A">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20431">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20434">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/pet">/pet</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#addPet">POST</h4>
+<p>Add a new pet to the store</p>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N2001B">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2001E">application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20025">Status Code405-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20028">Status Code405-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2002F">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20032">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#updatePet">PUT</h4>
+<p>Update an existing pet</p>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20042">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20045">application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N2004C">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2004F">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20056">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20059">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20060">Status Code405-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20063">Status Code405-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2006A">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2006D">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/pet/findByStatus">/pet/findByStatus</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#findPetsByStatus">GET</h4>
+<p>Multiple status values can be provided with comma separated strings
+Finds Pets by status</p>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>status</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+<small>(required)</small>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Status values that need to be considered for filter</p>
+</td>
+</tr>
+</table>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20098">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2009B">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200A2">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200A5">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/pet/findByTags">/pet/findByTags</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#findPetsByTags">GET</h4>
+<p>Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+Finds Pets by tags</p>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>tags</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+<small>(required)</small>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Tags to filter by</p>
+</td>
+</tr>
+</table>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N200D0">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200D3">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200DA">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N200DD">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/pet/{petId}">/pet/{petId}</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#getPetById">GET</h4>
+<p>Returns a single pet
+Find pet by ID</p>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20108">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2010B">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20112">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20115">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2011C">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2011F">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#updatePetWithForm">POST</h4>
+<p>Updates a pet in the store with form data</p>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>name</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Updated name of the pet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>status</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Updated status of the pet</p>
+</td>
+</tr>
+</table>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20159">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20160">Status Code405-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20163">Status Code405-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2016A">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#deletePet">DELETE</h4>
+<p>Deletes a pet</p>
+<h6>request header parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>api_key</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td />
+</tr>
+</table>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20194">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20197">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2019E">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N201A1">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/pet/{petId}/uploadImage">/pet/{petId}/uploadImage</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#uploadFile">POST</h4>
+<p>uploads an image</p>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>additionalMetadata</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>Additional data to pass to server</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>file</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>file to upload</p>
+</td>
+</tr>
+</table>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N201E4">multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N201EB">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N201F2">Status Code-multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/store/inventory">/store/inventory</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#getInventory">GET</h4>
+<p>Returns a map of status codes to quantities
+Returns pet inventories by status</p>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N2020E">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/store/order">/store/order</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#placeOrder">POST</h4>
+<p>Place an order for a pet</p>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20227">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N2022E">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20231">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20238">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2023B">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20242">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/store/order/{orderId}">/store/order/{orderId}</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#getOrderById">GET</h4>
+<p>For valid response try integer IDs with value &gt;= 1 and &lt;= 10. Other values will generated exceptions
+Find purchase order by ID</p>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N2026D">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20270">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20277">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2027A">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20281">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20284">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#deleteOrder">DELETE</h4>
+<p>For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
+Delete purchase order by ID</p>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N202A6">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202A9">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202B0">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202B3">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/user">/user</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#createUser">POST</h4>
+<p>This can only be done by the logged in user.
+Create user</p>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N202CC">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N202D3">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202D6">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202D9">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/user/createWithArray">/user/createWithArray</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#createUsersWithArrayInput">POST</h4>
+<p>Creates list of users with given input array</p>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N202F2">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N202F9">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202FC">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N202FF">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/user/createWithList">/user/createWithList</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#createUsersWithListInput">POST</h4>
+<p>Creates list of users with given input array</p>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20318">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N2031F">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20322">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20325">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/user/login">/user/login</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#loginUser">GET</h4>
+<p>Logs user into the system</p>
+<h6>request query parameters
+            </h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<strong>username</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+<small>(required)</small>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>The user name for login</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<strong>password</strong>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+<small>(required)</small>
+</p>
+<p>Default:
+                                <tt />
+</p>
+</td>
+<td>
+<p>The password for login in clear text</p>
+</td>
+</tr>
+</table>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N2035E">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20361">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20368">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2036B">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/user/logout">/user/logout</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#logoutUser">GET</h4>
+<p>Logs out current logged in user session</p>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20387">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2038A">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="resource">
+<h3 id="http://petstore.swagger.io/v2#/user/{username}">/user/{username}</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#getUserByName">GET</h4>
+<p>Get user by user name</p>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N203B5">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203B8">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203BF">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203C2">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203C9">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203CC">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#updateUser">PUT</h4>
+<p>This can only be done by the logged in user.
+Updated user</p>
+<p>
+<em>acceptable request representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N203EA">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N203F1">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203F4">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203FB">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N203FE">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20405">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+<div class="method">
+<h4 id="http://petstore.swagger.io/v2#deleteUser">DELETE</h4>
+<p>This can only be done by the logged in user.
+Delete user</p>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20427">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N2042A">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20431">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+<li>
+<a href="#N20434">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="representations">Representations</h2>
+<h3 id="N2001B">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2001E">application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20025">Status Code405-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20028">Status Code405-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2002F">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20032">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20042">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20045">application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2004C">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2004F">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20056">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20059">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20060">Status Code405-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20063">Status Code405-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2006A">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2006D">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20098">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2009B">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200A2">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200A5">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200D0">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200D3">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200DA">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N200DD">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20108">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2010B">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20112">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20115">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2011C">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2011F">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20159">application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20160">Status Code405-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20163">Status Code405-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2016A">Status Code-application/x-www-form-urlencoded<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20194">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20197">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2019E">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N201A1">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N201E4">multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N201EB">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N201F2">Status Code-multipart/form-data<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2020E">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20227">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2022E">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20231">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20238">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2023B">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20242">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2026D">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20270">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20277">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2027A">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20281">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20284">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202A6">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202A9">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202B0">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202B3">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202CC">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202D3">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202D6">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202D9">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202F2">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202F9">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202FC">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N202FF">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20318">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2031F">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20322">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20325">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2035E">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20361">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20368">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2036B">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20387">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2038A">Status Code-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203B5">Status Code200-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203B8">Status Code200-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203BF">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203C2">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203C9">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203CC">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203EA">application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203F1">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203F4">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203FB">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N203FE">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20405">Status Code-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20427">Status Code400-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N2042A">Status Code400-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20431">Status Code404-application/json<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+<h3 id="N20434">Status Code404-application/xml<abbr title="{http://wadl.dev.java.net/2009/02} " />
+</h3>
+</body>
+</html>

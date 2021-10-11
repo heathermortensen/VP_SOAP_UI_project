@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="5c6fcb09-dfa0-4e24-a852-1edec1f9ffe0" activeEnvironment="Default" name="Project 1" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.smartbear.swagger.ExportSwaggerAction$FormBase Path">petstore.swagger.io/v2</con:setting><con:setting id="com.smartbear.swagger.ExportSwaggerAction$FormTarget Folder">C:\Users\Bob Ross\SwaggerAPI_Defintion</con:setting><con:setting id="com.smartbear.swagger.ExportSwaggerAction$FormFormat">json</con:setting><con:setting id="com.smartbear.swagger.ExportSwaggerAction$FormAPI Version">1.0</con:setting><con:setting id="com.smartbear.swagger.ExportSwaggerAction$FormSwagger Version">2.0</con:setting></con:settings><con:interface xsi:type="con:RestService" id="77b1e98b-b543-4173-a18a-e790fb5812e8" wadlVersion="http://wadl.dev.java.net/2009/02" name="Swagger Petstore" type="rest" basePath="/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:description>This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.</con:description><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://petstore.swagger.io</con:endpoint><con:endpoint>https://petstore.swagger.io</con:endpoint></con:endpoints><con:resource name="/pet" path="/pet" id="c1362ec9-6006-4b0b-87c6-e502d3d256e8"><con:settings/><con:parameters/><con:method name="addPet" id="5320c780-d2b5-4ae0-9b02-537580f3ea29" method="POST"><con:description>&#13;
+Add a new pet to the store</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/><con:element xmlns:pet="https://petstore.swagger.io/v2/pet">pet:Fault</con:element></con:representation><con:request name="Request 1" id="27bb5d60-22bb-459c-83b4-96dd26430318" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="updatePet" id="52587b02-7992-499f-a792-8718f6ed65d8" method="PUT"><con:description>&#13;
+Update an existing pet</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/><con:element>apiResponse</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>text/xml</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="06191900-6ba5-4db8-9453-c38d6c4b163b" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/findByStatus" path="/pet/findByStatus" id="09ce1775-cb0b-445d-92b5-8ce7db3d0d2f"><con:settings/><con:parameters/><con:method name="findPetsByStatus" id="e76441b5-25d6-4934-93ce-46275502708c" method="GET"><con:description>Multiple status values can be provided with comma separated strings&#13;
+Finds Pets by status</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>status</con:name><con:style>QUERY</con:style><con:description>Status values that need to be considered for filter</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:request name="Request 1" id="cb7f9647-a819-4150-ac88-f5609c88bd9a" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/findByTags" path="/pet/findByTags" id="3a8e2633-4735-4e8d-b951-7c31d4659907"><con:settings/><con:parameters/><con:method name="findPetsByTags" id="d36709f7-1710-4dec-b258-4fe1ee7c605e" method="GET"><con:description>Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.&#13;
+Finds Pets by tags</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>tags</con:name><con:style>QUERY</con:style><con:description>Tags to filter by</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:request name="Request 1" id="32cefd5d-c452-4e64-a744-3ecf3ecb006f" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/{petId}" path="/pet/{petId}" id="b1660ef8-b53e-4fa0-a508-5e4a66f00e33"><con:settings/><con:parameters/><con:method name="getPetById" id="ea012b25-6fd8-4beb-abf0-e466fc837438" method="GET"><con:description>Returns a single pet&#13;
+Find pet by ID</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>petId</con:name><con:style>TEMPLATE</con:style><con:description>ID of pet to return</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/><con:element>apiResponse</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:pet="https://petstore.swagger.io/v2/pet/">pet:Fault</con:element></con:representation><con:request name="Request 1" id="6b815484-bb84-4766-9f09-6df334cbfb11" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="updatePetWithForm" id="a831061f-d54e-4781-a884-4158ef81d2fe" method="POST"><con:description>&#13;
+Updates a pet in the store with form data</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>petId</con:name><con:style>TEMPLATE</con:style><con:description>ID of pet that needs to be updated</con:description></con:parameter><con:parameter><con:name>name</con:name><con:style>QUERY</con:style><con:description>Updated name of the pet</con:description></con:parameter><con:parameter><con:name>status</con:name><con:style>QUERY</con:style><con:description>Updated status of the pet</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="58a30612-e0f8-4a7c-ac78-54880b246732" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="deletePet" id="7ef9ebf2-d037-4736-a24b-5b10766c21f6" method="DELETE"><con:description>&#13;
+Deletes a pet</con:description><con:settings/><con:parameters><con:parameter><con:name>api_key</con:name><con:style>HEADER</con:style><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>petId</con:name><con:style>TEMPLATE</con:style><con:description>Pet id to delete</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="Request 1" id="3b977413-3ccf-4631-ba73-e67f092f0e0a" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/{petId}/uploadImage" path="/pet/{petId}/uploadImage" id="c1bc2337-f3f5-4acf-a920-177c80dbaf7f"><con:settings/><con:parameters/><con:method name="uploadFile" id="215c5b5f-1898-4a67-bdf4-468e7e803cda" method="POST"><con:description>&#13;
+uploads an image</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>petId</con:name><con:style>TEMPLATE</con:style><con:description>ID of pet to update</con:description></con:parameter><con:parameter><con:name>additionalMetadata</con:name><con:style>QUERY</con:style><con:description>Additional data to pass to server</con:description></con:parameter><con:parameter><con:name>file</con:name><con:style>QUERY</con:style><con:description>file to upload</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>multipart/form-data</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element>apiResponse</con:element></con:representation><con:request name="Request 1" id="160b4321-3380-4e91-a59a-1b8034dfb370" mediaType="multipart/form-data"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/store/inventory" path="/store/inventory" id="e4aa54dd-b0ab-443c-9689-d654dbf141ca"><con:settings/><con:parameters/><con:method name="getInventory" id="184dee6c-484e-4c1b-b342-382027b798e2" method="GET"><con:description>Returns a map of status codes to quantities&#13;
+Returns pet inventories by status</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="Request 1" id="b88a45cd-3e6d-4250-8e93-62d12a3a0a2f" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/store/order" path="/store/order" id="0eda44ff-59fb-42a4-a827-f26aabd1cfb9"><con:settings/><con:parameters/><con:method name="placeOrder" id="7fda456f-d682-4090-a189-4a9827253868" method="POST"><con:description>&#13;
+Place an order for a pet</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="4977834c-62bd-4b83-a2c2-f3890f41222c" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/store/order/{orderId}" path="/store/order/{orderId}" id="e90dce2a-56ed-4793-8c42-ca3abc15beb7"><con:settings/><con:parameters/><con:method name="getOrderById" id="a256a69a-7c1a-4209-bb21-32075bb42736" method="GET"><con:description>For valid response try integer IDs with value >= 1 and &lt;= 10. Other values will generated exceptions&#13;
+Find purchase order by ID</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>orderId</con:name><con:style>TEMPLATE</con:style><con:description>ID of pet that needs to be fetched</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="Request 1" id="05135ec8-6a4a-4bd2-aefe-842ebe57d349" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="deleteOrder" id="5b48d48d-138a-409b-9867-eaa4667529dc" method="DELETE"><con:description>For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors&#13;
+Delete purchase order by ID</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>orderId</con:name><con:style>TEMPLATE</con:style><con:description>ID of the order that needs to be deleted</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="Request 1" id="5a15ccca-c010-4d5f-a45e-f70a6dc2f797" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user" path="/user" id="935e38b7-e6c6-4ab4-aac1-cc703d60aa04"><con:settings/><con:parameters/><con:method name="createUser" id="ae03fdcd-9787-4add-9215-db8e28a29a5b" method="POST"><con:description>This can only be done by the logged in user.&#13;
+Create user</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status/><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status/><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="5af85726-23a9-4438-b851-7083bac803e2" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/createWithArray" path="/user/createWithArray" id="4478102e-3a9f-409e-9fb9-aee47243b4e8"><con:settings/><con:parameters/><con:method name="createUsersWithArrayInput" id="b6d4bf26-4e49-4dbf-9088-42c50ec183ce" method="POST"><con:description>&#13;
+Creates list of users with given input array</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status/><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status/><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="80940322-43c6-4f4c-a581-f4d433304131" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/createWithList" path="/user/createWithList" id="dedd0ff6-0326-4f79-9017-bf28a5a1b0d4"><con:settings/><con:parameters/><con:method name="createUsersWithListInput" id="69e42cb4-8c48-4554-9d56-551aa165cdcf" method="POST"><con:description>&#13;
+Creates list of users with given input array</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status/><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status/><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="7a9228fa-8e00-43e8-927e-475a4cc2a593" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/login" path="/user/login" id="ce4d4f87-fdee-4aa4-a05e-48aaca85a22f"><con:settings/><con:parameters/><con:method name="loginUser" id="942c8907-6c4f-4462-9446-53ab9b7efde1" method="GET"><con:description>&#13;
+Logs user into the system</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:style>QUERY</con:style><con:description>The user name for login</con:description></con:parameter><con:parameter required="true"><con:name>password</con:name><con:style>QUERY</con:style><con:description>The password for login in clear text</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:request name="Request 1" id="d7a7ae69-1c25-4876-ae78-0680d225fd4a" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/logout" path="/user/logout" id="d8f9ff54-ea43-4c5e-b0c8-fda6c7b5ec8e"><con:settings/><con:parameters/><con:method name="logoutUser" id="16382f6b-947f-4aaa-b05b-848fd2884ca2" method="GET"><con:description>&#13;
+Logs out current logged in user session</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status/><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status/><con:params/></con:representation><con:request name="Request 1" id="bac94717-5167-4a07-86df-e99247056c69" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/{username}" path="/user/{username}" id="507f4fd8-0187-4271-8d92-bfcb3c089995"><con:settings/><con:parameters/><con:method name="getUserByName" id="267f08be-84ce-458a-ac32-753027bab63a" method="GET"><con:description>&#13;
+Get user by user name</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:style>TEMPLATE</con:style><con:description>The name that needs to be fetched. Use user1 for testing. </con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="Request 1" id="df9fafea-af1e-4684-9f37-ee78b95859e5" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="updateUser" id="dc0ba034-8e98-4e71-92c8-0fbb8679390b" method="PUT"><con:description>This can only be done by the logged in user.&#13;
+Updated user</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:style>TEMPLATE</con:style><con:description>name that need to be updated</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="ef0b7d80-2a61-4b08-ac8b-26b71883c145" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="deleteUser" id="5cfa53ae-d687-4455-9258-cbea3744da62" method="DELETE"><con:description>This can only be done by the logged in user.&#13;
+Delete user</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:style>TEMPLATE</con:style><con:description>The name that needs to be deleted</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="Request 1" id="276d0b4a-5e17-42b9-bd2f-85086a4f1a83" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="44773f06-329e-4e3e-98c3-a09caa7830ff" wadlVersion="http://wadl.dev.java.net/2009/02" name="Swagger Petstore" type="rest" basePath="/v2" definitionUrl="C:\Users\Bob Ross\SwaggerAPI_Defintion\Swagger Petstore_1.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="CreateWadlDocumentationAction@report-directory">C:\Users\Bob Ross\SwaggerAPI_Defintion</con:setting></con:settings><con:definitionCache type="TEXT" rootPart="file:/C:/Users/Bob%20Ross/SwaggerAPI_Defintion/Swagger%20Petstore_1.wadl"><con:part><con:url>file:/C:/Users/Bob%20Ross/SwaggerAPI_Defintion/Swagger%20Petstore_1.wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="Swagger Petstore">This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.</doc>
+  <resources base="http://petstore.swagger.io/v2">
+    <resource path="pet" id="/pet">
+      <doc xml:lang="en" title="/pet"/>
+      <method name="POST" id="addPet">
+        <doc xml:lang="en" title="addPet">Add a new pet to the store</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </request>
+        <response status="405">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+      <method name="PUT" id="updatePet">
+        <doc xml:lang="en" title="updatePet">Update an existing pet</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="405">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="pet/findByStatus" id="/pet/findByStatus">
+      <doc xml:lang="en" title="/pet/findByStatus"/>
+      <method name="GET" id="findPetsByStatus">
+        <doc xml:lang="en" title="findPetsByStatus">Multiple status values can be provided with comma separated strings
+Finds Pets by status</doc>
+        <request>
+          <param name="status" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="status Parameter">Status values that need to be considered for filter</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="pet/findByTags" id="/pet/findByTags">
+      <doc xml:lang="en" title="/pet/findByTags"/>
+      <method name="GET" id="findPetsByTags">
+        <doc xml:lang="en" title="findPetsByTags">Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+Finds Pets by tags</doc>
+        <request>
+          <param name="tags" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="tags Parameter">Tags to filter by</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="pet/{petId}" id="/pet/{petId}">
+      <doc xml:lang="en" title="/pet/{petId}"/>
+      <method name="GET" id="getPetById">
+        <doc xml:lang="en" title="getPetById">Returns a single pet
+Find pet by ID</doc>
+        <request>
+          <param name="petId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="petId Parameter">ID of pet to return</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+      <method name="POST" id="updatePetWithForm">
+        <doc xml:lang="en" title="updatePetWithForm">Updates a pet in the store with form data</doc>
+        <request>
+          <param name="petId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="petId Parameter">ID of pet that needs to be updated</doc>
+          </param>
+          <param name="name" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="name Parameter">Updated name of the pet</doc>
+          </param>
+          <param name="status" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="status Parameter">Updated status of the pet</doc>
+          </param>
+          <representation mediaType="application/x-www-form-urlencoded"/>
+        </request>
+        <response status="405">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/x-www-form-urlencoded"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deletePet">
+        <doc xml:lang="en" title="deletePet">Deletes a pet</doc>
+        <request>
+          <param name="api_key" type="xs:string" required="false" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="petId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="petId Parameter">Pet id to delete</doc>
+          </param>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="pet/{petId}/uploadImage" id="/pet/{petId}/uploadImage">
+      <doc xml:lang="en" title="/pet/{petId}/uploadImage"/>
+      <method name="POST" id="uploadFile">
+        <doc xml:lang="en" title="uploadFile">uploads an image</doc>
+        <request>
+          <param name="petId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="petId Parameter">ID of pet to update</doc>
+          </param>
+          <param name="additionalMetadata" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="additionalMetadata Parameter">Additional data to pass to server</doc>
+          </param>
+          <param name="file" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="file Parameter">file to upload</doc>
+          </param>
+          <representation mediaType="multipart/form-data"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="">
+          <representation mediaType="multipart/form-data"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="store/inventory" id="/store/inventory">
+      <doc xml:lang="en" title="/store/inventory"/>
+      <method name="GET" id="getInventory">
+        <doc xml:lang="en" title="getInventory">Returns a map of status codes to quantities
+Returns pet inventories by status</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="store/order" id="/store/order">
+      <doc xml:lang="en" title="/store/order"/>
+      <method name="POST" id="placeOrder">
+        <doc xml:lang="en" title="placeOrder">Place an order for a pet</doc>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="store/order/{orderId}" id="/store/order/{orderId}">
+      <doc xml:lang="en" title="/store/order/{orderId}"/>
+      <method name="GET" id="getOrderById">
+        <doc xml:lang="en" title="getOrderById">For valid response try integer IDs with value >= 1 and &lt;= 10. Other values will generated exceptions
+Find purchase order by ID</doc>
+        <request>
+          <param name="orderId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="orderId Parameter">ID of pet that needs to be fetched</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deleteOrder">
+        <doc xml:lang="en" title="deleteOrder">For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
+Delete purchase order by ID</doc>
+        <request>
+          <param name="orderId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="orderId Parameter">ID of the order that needs to be deleted</doc>
+          </param>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user" id="/user">
+      <doc xml:lang="en" title="/user"/>
+      <method name="POST" id="createUser">
+        <doc xml:lang="en" title="createUser">This can only be done by the logged in user.
+Create user</doc>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/createWithArray" id="/user/createWithArray">
+      <doc xml:lang="en" title="/user/createWithArray"/>
+      <method name="POST" id="createUsersWithArrayInput">
+        <doc xml:lang="en" title="createUsersWithArrayInput">Creates list of users with given input array</doc>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/createWithList" id="/user/createWithList">
+      <doc xml:lang="en" title="/user/createWithList"/>
+      <method name="POST" id="createUsersWithListInput">
+        <doc xml:lang="en" title="createUsersWithListInput">Creates list of users with given input array</doc>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/login" id="/user/login">
+      <doc xml:lang="en" title="/user/login"/>
+      <method name="GET" id="loginUser">
+        <doc xml:lang="en" title="loginUser">Logs user into the system</doc>
+        <request>
+          <param name="username" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="username Parameter">The user name for login</doc>
+          </param>
+          <param name="password" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="password Parameter">The password for login in clear text</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/logout" id="/user/logout">
+      <doc xml:lang="en" title="/user/logout"/>
+      <method name="GET" id="logoutUser">
+        <doc xml:lang="en" title="logoutUser">Logs out current logged in user session</doc>
+        <request/>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/{username}" id="/user/{username}">
+      <doc xml:lang="en" title="/user/{username}"/>
+      <method name="GET" id="getUserByName">
+        <doc xml:lang="en" title="getUserByName">Get user by user name</doc>
+        <request>
+          <param name="username" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="username Parameter">The name that needs to be fetched. Use user1 for testing.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+      <method name="PUT" id="updateUser">
+        <doc xml:lang="en" title="updateUser">This can only be done by the logged in user.
+Updated user</doc>
+        <request>
+          <param name="username" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="username Parameter">name that need to be updated</doc>
+          </param>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deleteUser">
+        <doc xml:lang="en" title="deleteUser">This can only be done by the logged in user.
+Delete user</doc>
+        <request>
+          <param name="username" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="username Parameter">The name that needs to be deleted</doc>
+          </param>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://petstore.swagger.io</con:endpoint></con:endpoints><con:resource name="/pet" path="pet" id="dbe39b90-228b-4f0a-99d0-bcd5c2f08c74"><con:settings/><con:parameters/><con:method name="addPet" id="b792dea0-0dfe-4cfa-b3ef-1ac60af86e8d" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ba804778-f07d-4207-ae52-97dc4090a3f5" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="updatePet" id="73c8199b-c54d-4d51-90f0-4f4ebf7c3f36" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="f5dbb739-e433-49c1-b1bd-96ba631bf3df" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request><con:request name="" id="e94b5f9f-f6e3-41c8-a11d-1a1fb06d58c3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/findByStatus" path="pet/findByStatus" id="bdc8a962-22c0-45e9-ab2f-b312b23a09b5"><con:settings/><con:parameters/><con:method name="findPetsByStatus" id="00d00e31-ffca-4701-956a-6191ef0a535f" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>status</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a6d5fe54-2685-476a-8d0f-f7d441027814" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/findByTags" path="pet/findByTags" id="b119f2e1-bf56-4d6a-9ff1-7c5dac936d11"><con:settings/><con:parameters/><con:method name="findPetsByTags" id="7a4950df-f304-45f6-806d-11534febbb38" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>tags</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="1ed341e5-5692-43bf-a13d-eefda91ba4da" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/{petId}" path="pet/{petId}" id="e2ac1746-4a6b-4966-b47f-7c984f7a05fd"><con:settings/><con:parameters/><con:method name="getPetById" id="1c12f327-faf6-462d-a615-8f46b903840b" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>petId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ba2808d6-a21c-4acf-8a38-cc8d48cafc7d" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="updatePetWithForm" id="ac0ae416-bee4-4aa1-8a29-27e8c171f304" method="POST"><con:settings/><con:parameters><con:parameter required="true"><con:name>petId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter><con:parameter><con:name>name</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>status</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="be512a0f-ff0d-4d57-afbb-cd135ebc456f" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="deletePet" id="92d9eb35-e5c8-463c-8b94-4c8d3bd2c840" method="DELETE"><con:settings/><con:parameters><con:parameter><con:name>api_key</con:name><con:value/><con:style>HEADER</con:style><con:default/></con:parameter><con:parameter required="true"><con:name>petId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a3cd6eeb-264e-4947-aedc-708d31ec9344" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/{petId}/uploadImage" path="pet/{petId}/uploadImage" id="87c565bf-8e41-407e-89ca-52a43d25a8c6"><con:settings/><con:parameters/><con:method name="uploadFile" id="bbe0da14-b28a-4b83-85ab-9bfec456b319" method="POST"><con:settings/><con:parameters><con:parameter required="true"><con:name>petId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter><con:parameter><con:name>additionalMetadata</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>file</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="REQUEST" id=""><con:mediaType>multipart/form-data</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>multipart/form-data</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="60708a1b-5e0b-4ec8-bde4-0b3a0b6bbe8f" mediaType="multipart/form-data"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/store/inventory" path="store/inventory" id="1d1b33eb-dcf7-438a-bba9-80b41959034e"><con:settings/><con:parameters/><con:method name="getInventory" id="ee9004fb-e2c1-453d-bc18-f222f1191407" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="dc55e0eb-8ee2-4bbb-a891-beaad4428aab" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/store/order" path="store/order" id="5f1d1e22-041d-48af-869b-84607f90c923"><con:settings/><con:parameters/><con:method name="placeOrder" id="f961b20b-3da2-478d-aae7-89bbb6a60ccb" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="2a124baf-a25e-4a53-8481-4f9ed448eb47" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/store/order/{orderId}" path="store/order/{orderId}" id="ea746907-8840-4848-8b14-d7be162be70a"><con:settings/><con:parameters/><con:method name="getOrderById" id="7a69c1eb-50f2-4ceb-ae70-fb1c6cb8eeae" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>orderId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="efdc12ab-899e-41e9-be7d-8283ed074ee2" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="deleteOrder" id="6bb12b1e-ed0b-47ab-bfa3-c84b265fc560" method="DELETE"><con:settings/><con:parameters><con:parameter required="true"><con:name>orderId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="33e15e75-5b25-4568-900e-5109c489f235" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user" path="user" id="8f03d4a1-f296-4bb0-b5b3-5bbf38c087dc"><con:settings/><con:parameters/><con:method name="createUser" id="990fade0-0b23-4495-b060-e0a4f5415e78" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="17d44f9a-6786-45c5-9dc0-025a0c78b010" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/createWithArray" path="user/createWithArray" id="4101f80e-1711-430d-94b0-66ccf801c9f7"><con:settings/><con:parameters/><con:method name="createUsersWithArrayInput" id="ac18a574-d881-4d4d-b658-d1f757e67b35" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="08eba32e-e6c0-4e8b-912f-773a325e9d6a" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/createWithList" path="user/createWithList" id="2d191bf5-4312-4339-a6c7-49626230fc6d"><con:settings/><con:parameters/><con:method name="createUsersWithListInput" id="087c38b2-e840-478f-8048-f7c98ec0c7bc" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="365b4f83-2f33-4564-b2a1-5a9330ee4043" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/login" path="user/login" id="6ccdb95c-75ea-4ec8-9b57-98af7baa272c"><con:settings/><con:parameters/><con:method name="loginUser" id="18e27c74-1ff1-4c3b-b0e5-303dda98bec1" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter required="true"><con:name>password</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9a591d85-b7bb-466b-8a18-a92d622b6620" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/logout" path="user/logout" id="b1aece2e-0d25-45ab-b517-a45553d1310b"><con:settings/><con:parameters/><con:method name="logoutUser" id="9827ee56-cfec-44b4-9c9a-f770b8aa6fa1" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="8cb35ba6-6a24-4542-acc9-df0624943349" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/{username}" path="user/{username}" id="cdb96d29-eb2f-4068-bf4a-c1b32c42500a"><con:settings/><con:parameters/><con:method name="getUserByName" id="47c6aded-ef6d-47ed-bf6b-029845fdc319" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="82acc37a-6987-457a-88af-2658e9e57f11" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="updateUser" id="3a06e8c8-0f8a-4fe6-a499-cc6251a531bb" method="PUT"><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="38a0c5a1-7a0b-455b-9d99-5472a236483d" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="deleteUser" id="63194783-e9e5-4fab-9a5b-d23c02a26767" method="DELETE"><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="6badec22-a05c-4792-9e93-24241676ad29" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="f5a93921-b6b9-462e-8e69-547035b86fe9" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://petstore.swagger.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://petstore.swagger.io</con:endpoint></con:endpoints><con:resource name="Swagger.json" path="/v2/swagger.json" id="3a8f9360-a90b-451c-9dc1-cb6ce0d407df"><con:settings/><con:parameters/><con:method name="Swagger.json 1" id="2ef53f17-3b1e-4147-b0d6-a3584fdd1042" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="e5f2a885-aa4c-4dbe-86c2-e0f985c95303" mediaType="application/json"><con:settings/><con:endpoint>https://petstore.swagger.io</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="49c88603-a14e-46b2-883e-da6470f9f902" wadlVersion="http://wadl.dev.java.net/2009/02" name="Swagger Petstore" type="rest" basePath="/v2" definitionUrl="C:\Users\Bob Ross\SwaggerAPI_Defintion\Swagger Petstore_1.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/Bob%20Ross/SwaggerAPI_Defintion/Swagger%20Petstore_1.wadl"><con:part><con:url>file:/C:/Users/Bob%20Ross/SwaggerAPI_Defintion/Swagger%20Petstore_1.wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="Swagger Petstore">This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.</doc>
+  <resources base="http://petstore.swagger.io/v2">
+    <resource path="pet" id="/pet">
+      <doc xml:lang="en" title="/pet"/>
+      <method name="POST" id="addPet">
+        <doc xml:lang="en" title="addPet">Add a new pet to the store</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </request>
+        <response status="405">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+      <method name="PUT" id="updatePet">
+        <doc xml:lang="en" title="updatePet">Update an existing pet</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="405">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="pet/findByStatus" id="/pet/findByStatus">
+      <doc xml:lang="en" title="/pet/findByStatus"/>
+      <method name="GET" id="findPetsByStatus">
+        <doc xml:lang="en" title="findPetsByStatus">Multiple status values can be provided with comma separated strings
+Finds Pets by status</doc>
+        <request>
+          <param name="status" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="status Parameter">Status values that need to be considered for filter</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="pet/findByTags" id="/pet/findByTags">
+      <doc xml:lang="en" title="/pet/findByTags"/>
+      <method name="GET" id="findPetsByTags">
+        <doc xml:lang="en" title="findPetsByTags">Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+Finds Pets by tags</doc>
+        <request>
+          <param name="tags" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="tags Parameter">Tags to filter by</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="pet/{petId}" id="/pet/{petId}">
+      <doc xml:lang="en" title="/pet/{petId}"/>
+      <method name="GET" id="getPetById">
+        <doc xml:lang="en" title="getPetById">Returns a single pet
+Find pet by ID</doc>
+        <request>
+          <param name="petId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="petId Parameter">ID of pet to return</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+      <method name="POST" id="updatePetWithForm">
+        <doc xml:lang="en" title="updatePetWithForm">Updates a pet in the store with form data</doc>
+        <request>
+          <param name="petId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="petId Parameter">ID of pet that needs to be updated</doc>
+          </param>
+          <param name="name" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="name Parameter">Updated name of the pet</doc>
+          </param>
+          <param name="status" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="status Parameter">Updated status of the pet</doc>
+          </param>
+          <representation mediaType="application/x-www-form-urlencoded"/>
+        </request>
+        <response status="405">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/x-www-form-urlencoded"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deletePet">
+        <doc xml:lang="en" title="deletePet">Deletes a pet</doc>
+        <request>
+          <param name="api_key" type="xs:string" required="false" default="" style="header" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+          <param name="petId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="petId Parameter">Pet id to delete</doc>
+          </param>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="pet/{petId}/uploadImage" id="/pet/{petId}/uploadImage">
+      <doc xml:lang="en" title="/pet/{petId}/uploadImage"/>
+      <method name="POST" id="uploadFile">
+        <doc xml:lang="en" title="uploadFile">uploads an image</doc>
+        <request>
+          <param name="petId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="petId Parameter">ID of pet to update</doc>
+          </param>
+          <param name="additionalMetadata" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="additionalMetadata Parameter">Additional data to pass to server</doc>
+          </param>
+          <param name="file" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="file Parameter">file to upload</doc>
+          </param>
+          <representation mediaType="multipart/form-data"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="">
+          <representation mediaType="multipart/form-data"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="store/inventory" id="/store/inventory">
+      <doc xml:lang="en" title="/store/inventory"/>
+      <method name="GET" id="getInventory">
+        <doc xml:lang="en" title="getInventory">Returns a map of status codes to quantities
+Returns pet inventories by status</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="store/order" id="/store/order">
+      <doc xml:lang="en" title="/store/order"/>
+      <method name="POST" id="placeOrder">
+        <doc xml:lang="en" title="placeOrder">Place an order for a pet</doc>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="store/order/{orderId}" id="/store/order/{orderId}">
+      <doc xml:lang="en" title="/store/order/{orderId}"/>
+      <method name="GET" id="getOrderById">
+        <doc xml:lang="en" title="getOrderById">For valid response try integer IDs with value >= 1 and &lt;= 10. Other values will generated exceptions
+Find purchase order by ID</doc>
+        <request>
+          <param name="orderId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="orderId Parameter">ID of pet that needs to be fetched</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deleteOrder">
+        <doc xml:lang="en" title="deleteOrder">For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
+Delete purchase order by ID</doc>
+        <request>
+          <param name="orderId" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="orderId Parameter">ID of the order that needs to be deleted</doc>
+          </param>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user" id="/user">
+      <doc xml:lang="en" title="/user"/>
+      <method name="POST" id="createUser">
+        <doc xml:lang="en" title="createUser">This can only be done by the logged in user.
+Create user</doc>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/createWithArray" id="/user/createWithArray">
+      <doc xml:lang="en" title="/user/createWithArray"/>
+      <method name="POST" id="createUsersWithArrayInput">
+        <doc xml:lang="en" title="createUsersWithArrayInput">Creates list of users with given input array</doc>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/createWithList" id="/user/createWithList">
+      <doc xml:lang="en" title="/user/createWithList"/>
+      <method name="POST" id="createUsersWithListInput">
+        <doc xml:lang="en" title="createUsersWithListInput">Creates list of users with given input array</doc>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/login" id="/user/login">
+      <doc xml:lang="en" title="/user/login"/>
+      <method name="GET" id="loginUser">
+        <doc xml:lang="en" title="loginUser">Logs user into the system</doc>
+        <request>
+          <param name="username" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="username Parameter">The user name for login</doc>
+          </param>
+          <param name="password" type="xs:string" required="true" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="password Parameter">The password for login in clear text</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/logout" id="/user/logout">
+      <doc xml:lang="en" title="/user/logout"/>
+      <method name="GET" id="logoutUser">
+        <doc xml:lang="en" title="logoutUser">Logs out current logged in user session</doc>
+        <request/>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="user/{username}" id="/user/{username}">
+      <doc xml:lang="en" title="/user/{username}"/>
+      <method name="GET" id="getUserByName">
+        <doc xml:lang="en" title="getUserByName">Get user by user name</doc>
+        <request>
+          <param name="username" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="username Parameter">The name that needs to be fetched. Use user1 for testing.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+      <method name="PUT" id="updateUser">
+        <doc xml:lang="en" title="updateUser">This can only be done by the logged in user.
+Updated user</doc>
+        <request>
+          <param name="username" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="username Parameter">name that need to be updated</doc>
+          </param>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="DELETE" id="deleteUser">
+        <doc xml:lang="en" title="deleteUser">This can only be done by the logged in user.
+Delete user</doc>
+        <request>
+          <param name="username" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="username Parameter">The name that needs to be deleted</doc>
+          </param>
+        </request>
+        <response status="400">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://petstore.swagger.io</con:endpoint></con:endpoints><con:resource name="/pet" path="pet" id="2f27d9f3-5692-4d67-8c2c-9e1a3047b083"><con:settings/><con:parameters/><con:method name="addPet" id="f49d9d5a-67ce-437c-a2b7-32628ae04bfe" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="c2ffa032-9bf1-4dca-ba26-b93ab49a9aa1" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="updatePet" id="e7291be2-3441-47f0-98d5-efee0fb3c8d3" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3eb859aa-67d8-482f-8d60-2bf575f9ac29" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/findByStatus" path="pet/findByStatus" id="c3f0dba7-ecda-4bfe-91dd-cc7a12c4b6e2"><con:settings/><con:parameters/><con:method name="findPetsByStatus" id="c340e815-5bb9-4c15-a12d-5da619e998d9" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>status</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="edc1b76e-ad2a-4a20-9ff2-d4019ec3ca48" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/findByTags" path="pet/findByTags" id="f7848e34-f124-45ad-a306-490551c0554a"><con:settings/><con:parameters/><con:method name="findPetsByTags" id="8fed85f7-59a4-4d51-94f7-99b11ef71bca" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>tags</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="73aafbed-bedc-440b-810d-9b3c91951cdb" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/{petId}" path="pet/{petId}" id="d3dab700-c2dc-47ae-9ba1-ee166626befc"><con:settings/><con:parameters/><con:method name="getPetById" id="bcb7fa37-cc46-478d-9d1b-17e22ab5cf8b" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>petId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="c30c234f-6ee6-43e3-9f40-5d49717876a1" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="updatePetWithForm" id="d11e17b5-f85e-4e21-beb2-875e7ecc3b21" method="POST"><con:settings/><con:parameters><con:parameter required="true"><con:name>petId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter><con:parameter><con:name>name</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>status</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>405</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9a5ff04d-7b0c-404e-9975-2916ac44a216" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="deletePet" id="8d113865-4632-4d34-8ead-cff1d234c0ce" method="DELETE"><con:settings/><con:parameters><con:parameter><con:name>api_key</con:name><con:value/><con:style>HEADER</con:style><con:default/></con:parameter><con:parameter required="true"><con:name>petId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="d6ff129d-1259-442a-b7ef-73964a964824" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/pet/{petId}/uploadImage" path="pet/{petId}/uploadImage" id="50dbc1c9-596f-4054-bfa6-bba45f945909"><con:settings/><con:parameters/><con:method name="uploadFile" id="0d74e65a-4280-4b92-bb0c-9b91989fde7b" method="POST"><con:settings/><con:parameters><con:parameter required="true"><con:name>petId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter><con:parameter><con:name>additionalMetadata</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>file</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="REQUEST" id=""><con:mediaType>multipart/form-data</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>multipart/form-data</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="fc5dc79f-81e0-491b-9a2c-e7aab887d5d1" mediaType="multipart/form-data"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/store/inventory" path="store/inventory" id="52d0c1b9-82e6-471f-8b27-3555235e2b5b"><con:settings/><con:parameters/><con:method name="getInventory" id="c97fad89-5586-4cae-9659-ec3f971148aa" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9a9542f4-4ca0-4f34-bbe0-b706c864780f" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/store/order" path="store/order" id="80c707dd-e2f7-4cec-9c77-acb0ad7fb5da"><con:settings/><con:parameters/><con:method name="placeOrder" id="d42402af-6ea6-4814-a534-7fcaf57b8103" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3511e738-7ac4-4a41-8958-e83e79c8e50c" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/store/order/{orderId}" path="store/order/{orderId}" id="72549bc4-e60d-4b90-a601-80a624b71b62"><con:settings/><con:parameters/><con:method name="getOrderById" id="232a9d08-4c9e-4b45-9b92-82a609f1bf59" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>orderId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="c888c35c-dee2-45d0-bd7e-f4a9f8b92eba" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="deleteOrder" id="293f0ec7-ba88-41c3-a8db-a90ce2e146f0" method="DELETE"><con:settings/><con:parameters><con:parameter required="true"><con:name>orderId</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="46d8ea08-9b5f-4910-afd6-091d16169eb2" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user" path="user" id="df69982a-a9b3-4df1-9a02-b8215888649c"><con:settings/><con:parameters/><con:method name="createUser" id="1e18257c-f66b-4835-9da9-3e8667d234db" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="1cf55afc-9f30-442e-beb5-0523b2cf4f79" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/createWithArray" path="user/createWithArray" id="c8597a49-60c0-408c-aa81-eb76c149c474"><con:settings/><con:parameters/><con:method name="createUsersWithArrayInput" id="ee23a299-60b2-4cc9-929b-6ceb751e57b2" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9ceb99c6-521a-42d6-94db-f0efebb30809" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/createWithList" path="user/createWithList" id="a4b6627c-dd70-4793-b3b0-c67a9e83a578"><con:settings/><con:parameters/><con:method name="createUsersWithListInput" id="42fe301f-8c59-4b7f-9bd2-9f24502e2f27" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a76e2adc-8696-4d39-bf73-63bc9b49dc5e" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/login" path="user/login" id="f6a73b5c-2cc6-445d-b4a1-31f8ce85264d"><con:settings/><con:parameters/><con:method name="loginUser" id="85b8aeac-1f67-403b-8405-d24b01e5bbb1" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter required="true"><con:name>password</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="fb65c6d2-47ed-4be7-837f-99272caf8c20" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/logout" path="user/logout" id="5a1c46bf-e31a-4709-b269-1e6b94372553"><con:settings/><con:parameters/><con:method name="logoutUser" id="dcf8728c-ccfd-49e5-8767-f31f03dedd73" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="82f260d5-e791-4484-b56c-37a6a0b3615c" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/user/{username}" path="user/{username}" id="1fb90beb-23ac-419e-8de7-a2564d471008"><con:settings/><con:parameters/><con:method name="getUserByName" id="1ccc2639-6cc2-4dd4-bdd9-727250a7f67e" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3f920a1b-1981-4825-9001-a1a29a8ca77a" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="updateUser" id="c698369c-724d-4460-ba92-d76ddfafd443" method="PUT"><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="b9eee53d-08fb-4db3-a407-a7162cc20300" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method><con:method name="deleteUser" id="d21fab32-3768-4f17-896e-0ae82bf254d5" method="DELETE"><con:settings/><con:parameters><con:parameter required="true"><con:name>username</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/xml</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="fd93112b-f0f0-4a2f-993e-dd6c5b4c446b" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:WsdlInterface" id="c3fd4db0-b0ac-4d41-82bd-27707fb107f2" wsaVersion="NONE" name="ServiceSoapBinding" type="wsdl" bindingName="{http://www.soapui.org/sample/}ServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/Bob%20Ross/SwaggerAPI_Defintion/sample-service_1.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/Bob%20Ross/SwaggerAPI_Defintion/sample-service_1.wsdl"><con:part><con:url>file:/C:/Users/Bob%20Ross/SwaggerAPI_Defintion/sample-service_1.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="sample" targetNamespace="http://www.soapui.org/sample/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.soapui.org/sample/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.soapui.org/sample/">
+      <xsd:element name="searchResponseContent">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="item" type="tns:ItemType" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ItemType">
+        <xsd:sequence>
+          <xsd:element name="id" type="xsd:string"/>
+          <xsd:element name="description" type="xsd:string"/>
+          <xsd:element name="price" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="buyResponseContent">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="purchasestatus" type="tns:PurchaseStatusType" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="PurchaseStatusType">
+        <xsd:sequence>
+          <xsd:element name="id" type="xsd:string"/>
+          <xsd:element name="stockStatus" type="xsd:string"/>
+          <xsd:element name="expectedDelivery" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="loginRequest">
+    <wsdl:part name="username" type="xsd:string"/>
+    <wsdl:part name="password" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="sessionid" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="logoutResponse">
+    <wsdl:part name="sessioninfo" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="logoutRequest">
+    <wsdl:part name="sessionid" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="searchRequest">
+    <wsdl:part name="sessionid" type="xsd:string"/>
+    <wsdl:part name="searchstring" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="searchResponse">
+    <wsdl:part name="searchresult" element="tns:searchResponseContent"/>
+  </wsdl:message>
+  <wsdl:message name="buyRequest">
+    <wsdl:part name="sessionid" type="xsd:string"/>
+    <wsdl:part name="buystring" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="buyResponse">
+    <wsdl:part name="buyresult" element="tns:buyResponseContent"/>
+  </wsdl:message>
+  <wsdl:message name="login_faultMsg">
+    <wsdl:part name="loginFault" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="logout_faultMsg">
+    <wsdl:part name="logoutFault" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="search_faultMsg">
+    <wsdl:part name="searchFault" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="buy_faultMsg">
+    <wsdl:part name="buyFault" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:portType name="ISampleService">
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginRequest"/>
+      <wsdl:output message="tns:loginResponse"/>
+      <wsdl:fault name="fault" message="tns:login_faultMsg"/>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input message="tns:logoutRequest"/>
+      <wsdl:output message="tns:logoutResponse"/>
+      <wsdl:fault name="fault" message="tns:logout_faultMsg"/>
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <wsdl:input message="tns:searchRequest"/>
+      <wsdl:output message="tns:searchResponse"/>
+      <wsdl:fault name="fault" message="tns:search_faultMsg"/>
+    </wsdl:operation>
+    <wsdl:operation name="buy">
+      <wsdl:input message="tns:buyRequest"/>
+      <wsdl:output message="tns:buyResponse"/>
+      <wsdl:fault name="fault" message="tns:buy_faultMsg"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoapBinding" type="tns:ISampleService">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://www.soapui.org/sample/login"/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault use="literal" name="fault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap:operation soapAction="http://www.soapui.org/sample/logout"/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault use="literal" name="fault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <soap:operation soapAction="http://www.soapui.org/sample/search"/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault use="literal" name="fault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="buy">
+      <soap:operation soapAction="http://www.soapui.org/sample/buy"/>
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://www.soapui.org/sample/"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault use="literal" name="fault"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SampleService">
+    <wsdl:port name="SamplePort" binding="tns:ServiceSoapBinding">
+      <soap:address location="http://www.soapui.org/sample"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://DESKTOP-CRKJBUA:8088/mockServiceSoapBinding</con:endpoint><con:endpoint>http://www.soapui.org/sample</con:endpoint></con:endpoints><con:operation id="6a5dfb03-815a-4f5e-a69b-9c0047f2448e" isOneWay="false" action="http://www.soapui.org/sample/buy" name="buy" bindingOperationName="buy" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fd4a9226-e39a-48ef-9e2f-13b6f48f4837" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.soapui.org/sample</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sam:buy>\r
+         <sessionid>?</sessionid>\r
+         <buystring>?</buystring>\r
+      </sam:buy>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/buy"/></con:call></con:operation><con:operation id="be4a0e28-90f3-43a3-ab0c-c60e92de9894" isOneWay="false" action="http://www.soapui.org/sample/login" name="login" bindingOperationName="login" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="170315f5-ba42-4d1c-b242-c9d2aaa3d5cd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.soapui.org/sample</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sam:login>\r
+         <username>?</username>\r
+         <password>?</password>\r
+      </sam:login>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/login"/></con:call></con:operation><con:operation id="07afabb9-c659-4254-ba8a-cb04271a32fe" isOneWay="false" action="http://www.soapui.org/sample/logout" name="logout" bindingOperationName="logout" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c5471669-06f8-453b-bb82-c27f6e235708" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.soapui.org/sample</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sam:logout>\r
+         <sessionid>?</sessionid>\r
+      </sam:logout>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/logout"/></con:call></con:operation><con:operation id="d7e40f9f-d389-4246-be92-91b4e3b2218f" isOneWay="false" action="http://www.soapui.org/sample/search" name="search" bindingOperationName="search" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d2f13e57-5a70-4e77-87e9-d5eb88eb1bf5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.soapui.org/sample</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sam:search>\r
+         <sessionid>?</sessionid>\r
+         <searchstring>?</searchstring>\r
+      </sam:search>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/search"/></con:call></con:operation></con:interface><con:testSuite id="e0e18733-4511-481a-a774-6c61cd522e8e" name="Swagger Petstore TestSuite"><con:description>TestSuite generated for REST Service [Swagger Petstore]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8f587bbd-8ee7-415e-9db3-ee05efc0bd21" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet] located at [/pet]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="0346cf27-fb7f-41c4-8a36-86abb7263b43"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet" methodName="addPet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="ba804778-f07d-4207-ae52-97dc4090a3f5" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a3aa3fe2-d596-4ad8-803e-5cf67282cb67" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet/findByStatus TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet/findByStatus] located at [/pet/findByStatus]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="781f8b8b-7152-405e-84c6-279d34d8843a"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/findByStatus" methodName="findPetsByStatus" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="a6d5fe54-2685-476a-8d0f-f7d441027814" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet/findByStatus</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/><con:securityTest id="ce687334-571b-40bb-ac11-bd3674e60763" name="SecurityTest 1" failOnError="true"><con:settings/><con:properties/></con:securityTest></con:testCase><con:testCase id="ee08408e-3786-4631-b8d9-c8086e0e8a16" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet/findByTags TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet/findByTags] located at [/pet/findByTags]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="8551d772-bd21-429b-9080-0ce891c62ab6"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/findByTags" methodName="findPetsByTags" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="1ed341e5-5692-43bf-a13d-eefda91ba4da" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet/findByTags</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="990c643f-83b0-40cf-bde5-ca6c3f95491b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet/{petId} TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet/{petId}] located at [/pet/{petId}]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="14a2bbe7-9fa0-44b7-b0b2-6cfe68b94d7a"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/{petId}" methodName="getPetById" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="ba2808d6-a21c-4acf-8a38-cc8d48cafc7d" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0d56bba5-1fe8-4256-ba8d-0c2e834ba3c0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet/{petId}/uploadImage TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet/{petId}/uploadImage] located at [/pet/{petId}/uploadImage]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="bc68cc68-c23b-4a4d-b6f7-db69ccc8d08c"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/{petId}/uploadImage" methodName="uploadFile" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="60708a1b-5e0b-4ec8-bde4-0b3a0b6bbe8f" mediaType="multipart/form-data"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet//uploadImage</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8993424f-4777-4904-b528-d5ea48aa781f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/store/inventory TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/store/inventory] located at [/store/inventory]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="4aa4c040-b103-4e8d-aca9-e4f35819b4a0"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/store/inventory" methodName="getInventory" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="dc55e0eb-8ee2-4bbb-a891-beaad4428aab" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/store/inventory</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3b743daa-c5a1-446b-800b-e0d8d4f028f9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/store/order TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/store/order] located at [/store/order]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="1c14a12c-3cf9-4645-831d-39ed1b0cd277"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/store/order" methodName="placeOrder" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="2a124baf-a25e-4a53-8481-4f9ed448eb47" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/store/order</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="74614b81-eb30-4113-994d-f8cb52380f5d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/store/order/{orderId} TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/store/order/{orderId}] located at [/store/order/{orderId}]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="02a84379-789a-4db8-b71a-6f268180d063"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/store/order/{orderId}" methodName="getOrderById" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="efdc12ab-899e-41e9-be7d-8283ed074ee2" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/store/order/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="11ad8946-d5ec-4239-8301-3f32cd2475a3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user] located at [/user]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="d6900d1c-5f11-4b03-955f-776d4609a80e"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user" methodName="createUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="17d44f9a-6786-45c5-9dc0-025a0c78b010" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/user</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="02c9cd86-20bc-4230-b255-ef2b38adb088" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/createWithArray TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/createWithArray] located at [/user/createWithArray]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="74af6130-ccbe-41a4-b5ae-e850eaf982e4"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/createWithArray" methodName="createUsersWithArrayInput" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="08eba32e-e6c0-4e8b-912f-773a325e9d6a" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/user/createWithArray</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3a36c1e0-1845-4b59-96a6-9f91099143e7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/createWithList TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/createWithList] located at [/user/createWithList]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="c5b59c34-9c49-419f-ba20-918624760501"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/createWithList" methodName="createUsersWithListInput" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="365b4f83-2f33-4564-b2a1-5a9330ee4043" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/user/createWithList</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="fe5840f0-d839-4b82-8ff0-f69264f6f56c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/login TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/login] located at [/user/login]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="0496ec88-f8b0-4fc9-ae1f-0a4eb0af715c"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/login" methodName="loginUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="9a591d85-b7bb-466b-8a18-a92d622b6620" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6c06b768-0a46-47e0-b458-93ae264013e8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/logout TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/logout] located at [/user/logout]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="57375fbe-0d51-4621-bfd8-cf28a377a815"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/logout" methodName="logoutUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="8cb35ba6-6a24-4542-acc9-df0624943349" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/user/logout</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f32afea3-b974-440b-9caf-340dcedf234f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/{username} TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/{username}] located at [/user/{username}]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="4c4a9237-c756-4579-94eb-4c43e7273617"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/{username}" methodName="getUserByName" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="82acc37a-6987-457a-88af-2658e9e57f11" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/user/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="test_suite_request" id="ab69c916-4acc-4683-be9a-0c955c461cf1"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/{username}" methodName="updateUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="test_suite_request" id="38a0c5a1-7a0b-455b-9d99-5472a236483d" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/user/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2a51369e-1364-4276-a1da-7894db65c21f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Test_Case_1_Create_pet_and_add_picture" searchProperties="true"><con:description>A pet is added and then a corresponding photo is added</con:description><con:settings/><con:testStep type="restrequest" name="REST Request" id="7868cad7-a87d-4cdc-b023-639a2cf20067" disabled="true"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet" methodName="addPet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="27bb5d60-22bb-459c-83b4-96dd26430318" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet</con:originalUri><con:assertion type="Invalid HTTP Status Codes" id="3bb415e0-b8b0-4863-a9b1-ae8383b54bb5" name="Invalid HTTP Status Codes"><con:configuration><codes>405</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="add pet to store" id="60c0c1ac-71f5-4f8e-90b7-39f9e548eb4a"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet" methodName="updatePet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="add pet to store" id="06191900-6ba5-4db8-9453-c38d6c4b163b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet</con:originalUri><con:assertion type="Invalid HTTP Status Codes" id="a922495e-6636-4527-92a8-a1cae2fc6fd7" name="Invalid HTTP Status Codes" disabled="true"><con:configuration><codes>405</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="f91ea2ee-e34f-45fd-a3f9-5d1740881ef6" name="Contains" disabled="true"><con:configuration><token>! "id": 0</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Schema Compliance" id="cdd376b5-20e2-41fd-800e-83285abcf1eb" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Simple NotContains" id="3cd29e6b-ce64-482e-8f7b-effc685f4850" name="Not Contains"><con:configuration><token>"code": 0"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="54a2a968-569a-4b58-9370-7f7952254dc0" name="Valid HTTP Status Codes"><con:configuration><codes>405</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="313468e1-9292-4eba-b72b-34593cbf2f7b" name="Response status ok"><con:configuration><token>&lt;status>OK&lt;/status></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="add picture to pet" id="e42d43be-6f39-4a20-85a2-50c746821496"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/{petId}/uploadImage" methodName="uploadFile" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="add picture to pet" id="160b4321-3380-4e91-a59a-1b8034dfb370" mediaType="multipart/form-data" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet//uploadImage</con:originalUri><con:assertion type="Simple Contains" id="0f070103-82ab-4b62-8275-4e35cd1b9594" name="Contains" disabled="true"><con:configuration><token> !"code": 0"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="8a7a6caf-fbf3-449c-8a6f-e75237ddb446" name="Invalid HTTP Status Codes"><con:configuration><codes>405</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="10ffe746-9c67-49f3-b2f1-daada16a66a1" name="no pic added"><con:configuration><token>! "photoUrls": [
+    "string"
+  ]</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Schema Compliance" id="3dca4a40-05da-47d4-81b5-bf1ee7c29211" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Response SLA Assertion" id="9fadfff6-fe83-4fac-bbf5-641acdd43fe8" name="Response SLA"><con:configuration><SLA>200</SLA></con:configuration></con:assertion><con:assertion type="Sensitive Information Exposure" id="417aa65f-da33-40fe-b95b-af4b6bbb991c" name="Sensitive Information Exposure"><con:configuration><AssertionSpecificExposureList>special-key###api key from swagger</AssertionSpecificExposureList><IncludeProjectSpecific>true</IncludeProjectSpecific><IncludeGlobal>true</IncludeGlobal></con:configuration></con:assertion><con:assertion type="Simple Contains" id="216e245a-b890-41bb-8a82-f341de5d2b7b" name="error" disabled="true"><con:configuration><token>error</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="4f9ab4d5-e11c-45bb-9ccd-2aa26d3a3d8f" name="Not Contains"><con:configuration><token>error</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="7dfb12c0-2c5f-4470-b58d-2f1038a35aad" name="Not Contains Id=0 - no input"><con:configuration><token>"code": 0"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="e4647e60-8bb1-4b7b-b641-fdb53df27823" name="OK"><con:configuration><token>OK Response message</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="e331ee34-0897-4213-b2a8-5dc64c034ddf" name="API null response"><con:configuration><token>null for uri: </token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:setupScript>get TestCase def tc = testRunner.testCase.testSuite.project.testSuites["Swagger Petstore TestSuite"] .testCases["Test_Case_1_Create_pet_and_add_picture"]
+
+log.info "Status: $runner.status, time taken for TestCase was: $runner.timeTaken ms"
+
+assert runner.status != Status.FAILED : runner.reason</con:setupScript><con:properties><con:property><con:name>photo</con:name><con:value/></con:property><con:property><con:name>petId</con:name><con:value>1</con:value></con:property></con:properties></con:testCase><con:testCase id="940e00e7-d66b-47d1-8383-b3f707fb710c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet] located at [/pet]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="036b643b-9ad9-416c-92e7-94c0a393b9ba"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet" methodName="addPet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="c2ffa032-9bf1-4dca-ba26-b93ab49a9aa1" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="wadl test" id="69b6941b-0908-4f1d-97dc-88ebcaae126a"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet" methodName="updatePet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="wadl test" id="3eb859aa-67d8-482f-8d60-2bf575f9ac29" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5746acbe-4bda-4cf8-bc09-c253a65453af" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet/findByStatus TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet/findByStatus] located at [/pet/findByStatus]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="29dbbfde-ce56-49c8-9228-75da0f35b4cd"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/findByStatus" methodName="findPetsByStatus" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="edc1b76e-ad2a-4a20-9ff2-d4019ec3ca48" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="188c0004-66e3-4345-81c9-c731195837d6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet/findByTags TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet/findByTags] located at [/pet/findByTags]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="23fb269e-6d12-43bd-bad7-1144841e5e2a"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/findByTags" methodName="findPetsByTags" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="73aafbed-bedc-440b-810d-9b3c91951cdb" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6b630b12-056e-4a6d-9198-c56fc3ebcf42" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet/{petId} TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet/{petId}] located at [/pet/{petId}]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="007787f2-3a7d-4736-9890-780103d8d0cf"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/{petId}" methodName="getPetById" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="c30c234f-6ee6-43e3-9f40-5d49717876a1" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="schema_compliance_with_wadl" id="ecae5940-2a94-47b0-acc6-54f4e70e7618"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/{petId}" methodName="updatePetWithForm" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="schema_compliance_with_wadl" id="9a5ff04d-7b0c-404e-9975-2916ac44a216" mediaType="application/x-www-form-urlencoded"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Request 12" id="30ea033c-d471-44b1-8767-9d2f59402b18"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/{petId}" methodName="deletePet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 12" id="d6ff129d-1259-442a-b7ef-73964a964824" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4e1cb0f5-63e9-4c20-884f-bb2cad10e218" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/pet/{petId}/uploadImage TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/pet/{petId}/uploadImage] located at [/pet/{petId}/uploadImage]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="fc5254dc-3874-4fba-ac43-c9b69615c788"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/{petId}/uploadImage" methodName="uploadFile" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="fc5dc79f-81e0-491b-9a2c-e7aab887d5d1" mediaType="multipart/form-data"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2eeac995-a911-4ab3-af41-c80436a99c57" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/store/inventory TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/store/inventory] located at [/store/inventory]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="2f447386-5bb7-47ac-b2e2-3038d98d175a"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/store/inventory" methodName="getInventory" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="9a9542f4-4ca0-4f34-bbe0-b706c864780f" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="19c4e74c-fca4-4614-ac10-50c6896ae980" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/store/order TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/store/order] located at [/store/order]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="7d8d4f9c-4ebc-4ae9-b080-e6f468a73193"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/store/order" methodName="placeOrder" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="3511e738-7ac4-4a41-8958-e83e79c8e50c" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="417d1e85-d928-4881-99da-c3b98d91bb49" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/store/order/{orderId} TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/store/order/{orderId}] located at [/store/order/{orderId}]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="67505198-63e0-4ae1-a7bf-b96f1d07b106"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/store/order/{orderId}" methodName="getOrderById" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="c888c35c-dee2-45d0-bd7e-f4a9f8b92eba" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0e1cc342-ad52-4155-9097-864d2ca25032" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user] located at [/user]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="d7cce757-ad58-48f8-a074-6e0c4d7c9360"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user" methodName="createUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="1cf55afc-9f30-442e-beb5-0523b2cf4f79" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="7f328115-b23d-4629-86e7-43d170b2e833" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/createWithArray TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/createWithArray] located at [/user/createWithArray]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="88a8ab84-3107-4fcd-bede-bb2a4f1e3040"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/createWithArray" methodName="createUsersWithArrayInput" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="9ceb99c6-521a-42d6-94db-f0efebb30809" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="7525dcf3-35c4-4ae2-8cec-8812b5084d19" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/createWithList TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/createWithList] located at [/user/createWithList]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="39409725-e682-4615-bdc3-e6a09a95e662"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/createWithList" methodName="createUsersWithListInput" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="a76e2adc-8696-4d39-bf73-63bc9b49dc5e" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a6810dd9-4736-4ad5-b4af-ec989da90a84" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/login TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/login] located at [/user/login]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="c43aadae-dc2e-460a-a235-61a661776983"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/login" methodName="loginUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="fb65c6d2-47ed-4be7-837f-99272caf8c20" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5aef0b0a-0625-4f99-9800-5cd7c258cdfa" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/logout TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/logout] located at [/user/logout]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="b60968a7-0929-4d27-bf5f-2a0da06deb77"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/logout" methodName="logoutUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="82f260d5-e791-4484-b56c-37a6a0b3615c" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6563441f-13de-47c2-8b00-36c8daff7123" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user/{username} TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/user/{username}] located at [/user/{username}]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="398c9a10-40cb-4c1d-ad6b-3ff04c0266ca"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/user/{username}" methodName="getUserByName" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="3f920a1b-1981-4825-9001-a1a29a8ca77a" mediaType="application/json"><con:settings/><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/><con:setupScript>get TestCase def tc = testRunner.testCase.testSuite.project.testSuites["Swagger Petstore TestSuite"] .testCases["Test_Case_1_Create_pet_and_add_picture"]
+
+log.info "Status: $runner.status, time taken for TestCase was: $runner.timeTaken ms"
+
+assert runner.status != Status.FAILED : runner.reason</con:setupScript></con:testSuite><con:testSuite id="15b6d477-e93e-4dc5-9d63-eeece6244186" name="ServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="04512455-a9fe-4177-ae64-b484b659e46b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="buy TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="6b82ca45-1327-49c1-bb18-9a9c27649861" name="buy"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>buy</con:operation><con:request name="buy" id="ced071fe-97ac-4945-889b-c9a2a586addc"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.soapui.org/sample</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sam:buy>\r
+         <sessionid>?</sessionid>\r
+         <buystring>?</buystring>\r
+      </sam:buy>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.soapui.org/sample/buy"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e38bcb35-bb80-4fd8-a25e-b794d88f2565" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="login TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="9196e559-8381-4457-badd-8a144cd13ac6" name="login"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>login</con:operation><con:request name="login" id="8d0e0ac1-a8f9-4ab2-88dd-390a7dc3129a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.soapui.org/sample</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sam:login>\r
+         <username>?</username>\r
+         <password>?</password>\r
+      </sam:login>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.soapui.org/sample/login"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="330fc6f3-0035-4b8e-9772-f4b6998c2bcb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="logout TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="fa9fc56a-ee1b-4967-aac7-7fcef405eae7" name="logout"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>logout</con:operation><con:request name="logout" id="027fe584-9d0d-41f1-9a76-317e322b968b"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.soapui.org/sample</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sam:logout>\r
+         <sessionid>?</sessionid>\r
+      </sam:logout>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.soapui.org/sample/logout"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="38dd64a5-82f7-431e-8f0b-37f856e1d2ab" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="search TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="cd283485-20b6-4b90-9d55-d56b9e04eb03" name="search"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ServiceSoapBinding</con:interface><con:operation>search</con:operation><con:request name="search" id="e3eed08d-1942-420f-8008-238588a1a82a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.soapui.org/sample</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sam:search>\r
+         <sessionid>?</sessionid>\r
+         <searchstring>?</searchstring>\r
+      </sam:search>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.soapui.org/sample/search"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="2b1b5465-680f-497f-84f7-13f54cad33f6" name="Testing_Requirement_2_Search_for_new_pet_and_similar_pets"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="be873eb3-d0e9-45ae-8b34-bfde60dbd6c8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="properties" name="Properties" id="161c6b36-8ade-40c5-b889-9a65cfd12e65"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>petId</con:name><con:value>5</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="getPetById - Request 1" id="c3cea901-0eef-4031-a85e-31c8b8dbb445"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/{petId}" methodName="getPetById" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getPetById - Request 1" id="c30c234f-6ee6-43e3-9f40-5d49717876a1" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet/</con:originalUri><con:assertion type="Simple NotContains" id="5ca9de29-d3b6-488a-a000-13a29eec9bd6" name="Not Contains"><con:configuration><token>"id": 0</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="31e52fb7-f26c-4343-92e3-070316f9f775" name="Valid HTTP Status Codes" disabled="true"><con:configuration><codes>HTTP/1.1 200 OK</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="d5b79fba-3096-46bc-9e5a-b6e0c70e08be" name="Contains" disabled="true"><con:configuration><token>HTTP/1.1 200 OK</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="916ba065-32a3-4aee-8f50-0f2b9f31d9b1" name="Contains property defined id = 8" disabled="true"><con:configuration><token>8</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="7e48d0b4-0de1-4c0b-b95c-7e31475ad6c3" name="Contains 2a"><con:configuration><token>id: 2</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="18ad8c60-0ac1-4b29-8759-80fff7f521f1" name="Contains 2b"><con:configuration><token>2</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="5037bf80-e1f9-41a4-b949-b3dd300226f8" name="Contains 2c"><con:configuration><token>"id": 2</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="petId" value="2" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="findPetsByStatus - Request 1" id="c1a0535c-eeca-4574-9a3c-852d1d3d5ba2"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet/findByStatus" methodName="findPetsByStatus" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="findPetsByStatus - Request 1" id="edc1b76e-ad2a-4a20-9ff2-d4019ec3ca48" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:originalUri>https://petstore.swagger.io/v2/pet/findByStatus</con:originalUri><con:assertion type="Simple Contains" id="decdee33-f3b8-4768-a6d3-beb25fe0dc33" name="Contains"><con:configuration><token>2</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="c46f4615-e005-40e6-abe0-76e8468e9cee" name="Contains status = avalible"><con:configuration><token>available</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="status" value="available" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>petId</con:name><con:value>2</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>petId</con:name><con:value>8</con:value></con:property></con:properties></con:testSuite><con:mockService id="aad79306-821a-48ed-b48d-fb20620797b1" port="8088" path="/mockServiceSoapBinding" host="DESKTOP-CRKJBUA" name="ServiceSoapBinding MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="buy" id="43ddc892-2ce3-433d-be58-3b80bfe7b6f6" interface="ServiceSoapBinding" operation="buy"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="5a771ef8-0985-462c-a5e9-2b00fa6cb68b" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sam:buyResponse>
+         <sam:buyResponseContent>
+            <!--1 or more repetitions:-->
+            <purchasestatus>
+               <id>?</id>
+               <stockStatus>?</stockStatus>
+               <expectedDelivery>?</expectedDelivery>
+            </purchasestatus>
+         </sam:buyResponseContent>
+      </sam:buyResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/buy"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="login" id="074d940d-dcf1-43b6-9470-c3a435f33b33" interface="ServiceSoapBinding" operation="login"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="c9cd72ac-b73c-4e50-a164-a60268e05826" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sam:loginResponse>
+         <sessionid>?</sessionid>
+      </sam:loginResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/login"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="logout" id="0b919db5-e072-4676-9123-2e01174663f4" interface="ServiceSoapBinding" operation="logout"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="ca4cb3f9-9d05-4b91-801e-f34e2b4272db" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sam:logoutResponse>
+         <sessioninfo>?</sessioninfo>
+      </sam:logoutResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/logout"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="search" id="94486648-4d52-459a-a2dc-0d1572c82ddc" interface="ServiceSoapBinding" operation="search"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="d4057cd4-45a9-481b-bfd1-86f191f6508a" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sam:searchResponse>
+         <sam:searchResponseContent>
+            <!--1 or more repetitions:-->
+            <item>
+               <id>?</id>
+               <description>?</description>
+               <price>?</price>
+            </item>
+         </sam:searchResponseContent>
+      </sam:searchResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.soapui.org/sample/search"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" username="tester">https://petstore.swagger.io</con:endpoint><con:endpoint mode="COMPLEMENT" username="tester" password="abc123">http://petstore.swagger.io</con:endpoint></con:endpointStrategy><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

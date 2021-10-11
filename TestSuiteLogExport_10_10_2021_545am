@@ -1,0 +1,43 @@
+TestCase [/pet TestCase] started at 2021-10-10 05:44:07.835
+Step 1 [Request 1] UNKNOWN: took 404 ms
+TestCase [/pet TestCase] finished with status [FINISHED], time taken = 404
+TestCase [/pet/findByStatus TestCase] started at 2021-10-10 05:44:09.573
+TestCase [/pet/findByStatus TestCase] finished with status [FINISHED], time taken = 61
+Step 1 [Request 1] UNKNOWN: took 61 ms
+TestCase [/pet/findByTags TestCase] started at 2021-10-10 05:44:09.736
+Step 1 [Request 1] UNKNOWN: took 60 ms
+TestCase [/pet/findByTags TestCase] finished with status [FINISHED], time taken = 60
+TestCase [/pet/{petId} TestCase] started at 2021-10-10 05:44:09.870
+TestCase [/pet/{petId} TestCase] finished with status [FINISHED], time taken = 61
+Step 1 [Request 1] UNKNOWN: took 61 ms
+TestCase [/pet/{petId}/uploadImage TestCase] started at 2021-10-10 05:44:10.003
+Step 1 [Request 1] UNKNOWN: took 61 ms
+TestCase [/pet/{petId}/uploadImage TestCase] finished with status [FINISHED], time taken = 61
+TestCase [/store/inventory TestCase] started at 2021-10-10 05:44:10.206
+Step 1 [Request 1] UNKNOWN: took 51 ms
+TestCase [/store/inventory TestCase] finished with status [FINISHED], time taken = 51
+TestCase [/store/order TestCase] started at 2021-10-10 05:44:10.323
+Step 1 [Request 1] UNKNOWN: took 51 ms
+TestCase [/store/order TestCase] finished with status [FINISHED], time taken = 51
+TestCase [/store/order/{orderId} TestCase] started at 2021-10-10 05:44:10.442
+Step 1 [Request 1] UNKNOWN: took 51 ms
+TestCase [/store/order/{orderId} TestCase] finished with status [FINISHED], time taken = 51
+TestCase [/user TestCase] started at 2021-10-10 05:44:10.556
+Step 1 [Request 1] UNKNOWN: took 53 ms
+TestCase [/user TestCase] finished with status [FINISHED], time taken = 53
+TestCase [/user/createWithArray TestCase] started at 2021-10-10 05:44:10.682
+TestCase [/user/createWithArray TestCase] finished with status [FINISHED], time taken = 51
+Step 1 [Request 1] UNKNOWN: took 51 ms
+TestCase [/user/createWithList TestCase] started at 2021-10-10 05:44:10.809
+Step 1 [Request 1] UNKNOWN: took 51 ms
+TestCase [/user/createWithList TestCase] finished with status [FINISHED], time taken = 51
+TestCase [/user/login TestCase] started at 2021-10-10 05:44:10.924
+Step 1 [Request 1] UNKNOWN: took 50 ms
+TestCase [/user/login TestCase] finished with status [FINISHED], time taken = 50
+TestCase [/user/logout TestCase] started at 2021-10-10 05:44:11.039
+Step 1 [Request 1] UNKNOWN: took 65 ms
+TestCase [/user/logout TestCase] finished with status [FINISHED], time taken = 65
+TestCase [/user/{username} TestCase] started at 2021-10-10 05:44:11.165
+Step 1 [Request 1] UNKNOWN: took 140 ms
+TestCase [/user/{username} TestCase] finished with status [FINISHED], time taken = 192
+Step 2 [test_suite_request] UNKNOWN: took 52 ms
